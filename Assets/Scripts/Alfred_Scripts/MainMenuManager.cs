@@ -7,12 +7,12 @@ public class MainMenuManager : MonoBehaviour
 {
     public void PlayGame()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("SheikhPrototyping");
     }
 
     public void BackToMain()
     {
-        SceneManager.LoadScene("MainMenu_Scene");
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
