@@ -1,56 +1,72 @@
 using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public GameObject enemyPrefab; 
-    public Transform spawnPoint; 
-    public int numberOfEnemiesToSpawnAtOnce = 1; 
-    public float spawnRadius = 5f; 
-    public float spawnInterval = 5f; 
-    public int totalEnemiesToSpawn = 20; 
+    [System.Serializable]
+    public class EnemyType
+    {
+        public GameObject enemyPrefab;     
+        public int numberOfEnemies;        
+        public float spawnInterval = 1f;    
+        public Transform spawnPoint;        
+    }
 
-    private int enemiesSpawned = 0; 
+    [System.Serializable]
+    public class Wave
+    {
+        public List<EnemyType> enemyTypes;
+        public float spawnRadius = 5f;      
+        public float timeBetweenWaves = 5f; 
+    }
+
+    public List<Wave> waves;
+    private int currentWaveIndex = 0;
 
     void Start()
     {
-        StartCoroutine(SpawnEnemies());
+        StartCoroutine(SpawnWaves());
     }
 
-    IEnumerator SpawnEnemies()
+    IEnumerator SpawnWaves()
     {
-        while (enemiesSpawned < totalEnemiesToSpawn) 
+        while (currentWaveIndex < waves.Count)
         {
-            for (int i = 0; i < numberOfEnemiesToSpawnAtOnce; i++)
+            Wave currentWave = waves[currentWaveIndex];
+
+            foreach (EnemyType enemyType in currentWave.enemyTypes)
             {
-                if (enemiesSpawned >= totalEnemiesToSpawn)
+                for (int i = 0; i < enemyType.numberOfEnemies; i++)
                 {
-                    break;
-                }
+                    Vector3 randomPosition = enemyType.spawnPoint.position + Random.insideUnitSphere * currentWave.spawnRadius;
+                    NavMeshHit hit;
 
-                
-                Vector3 randomPosition = spawnPoint.position + Random.insideUnitSphere * spawnRadius;
-                NavMeshHit hit;
+                    if (NavMesh.SamplePosition(randomPosition, out hit, currentWave.spawnRadius, NavMesh.AllAreas))
+                    {
+                        Instantiate(enemyType.enemyPrefab, hit.position, Quaternion.identity);
+                        Debug.Log($"Wave {currentWaveIndex + 1}: Spawned enemy of type {enemyType.enemyPrefab.name} at {hit.position} from spawn point {enemyType.spawnPoint.name}");
+                    }
+                    else
+                    {
+                        Debug.Log("Spawn position not valid, retrying...");
+                        i--; 
+                    }
 
-                
-                if (NavMesh.SamplePosition(randomPosition, out hit, spawnRadius, NavMesh.AllAreas))
-                {
-                    
-                    Instantiate(enemyPrefab, hit.position, Quaternion.identity);
-                    enemiesSpawned++; 
-                    Debug.Log($"Spawned enemy at: {hit.position}. Total spawned: {enemiesSpawned}");
-                }
-                else
-                {
-                    Debug.Log("Spawn position not valid, retrying...");
-                    i--; 
+                    yield return new WaitForSeconds(enemyType.spawnInterval);
                 }
             }
 
-            yield return new WaitForSeconds(spawnInterval);
+            Debug.Log($"Wave {currentWaveIndex + 1} completed. Waiting {currentWave.timeBetweenWaves} seconds before the next wave.");
+            currentWaveIndex++;
+
+            if (currentWaveIndex < waves.Count)
+            {
+                yield return new WaitForSeconds(currentWave.timeBetweenWaves);
+            }
         }
 
-        Debug.Log("All enemies have been spawned.");
+        Debug.Log("All waves have been completed.");
     }
 }
