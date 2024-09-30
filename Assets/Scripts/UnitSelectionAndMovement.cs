@@ -11,11 +11,10 @@ public class UnitSelectionAndMovement : MonoBehaviour
     private Vector2 startPos;
     private bool isSelecting = false;
     private bool isBoxValid = false; 
-    public float minimumBoxSize = 10f; 
+    private float minimumBoxSize = 20f;
 
     void Update()
     {
-       
         if (Input.GetMouseButtonDown(0))
         {
             startPos = Input.mousePosition;
@@ -33,7 +32,7 @@ public class UnitSelectionAndMovement : MonoBehaviour
 
             if (Mathf.Abs(width) > minimumBoxSize && Mathf.Abs(height) > minimumBoxSize)
             {
-                isBoxValid = true; 
+                isBoxValid = true;
             }
         }
 
@@ -41,13 +40,13 @@ public class UnitSelectionAndMovement : MonoBehaviour
         {
             isSelecting = false;
 
-            if (isBoxValid) 
+            if (isBoxValid)
             {
                 SelectUnitsInBox();
             }
             else
             {
-                SelectUnit(); 
+                SelectUnit();
             }
         }
 
@@ -65,10 +64,12 @@ public class UnitSelectionAndMovement : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, selectableLayer))
         {
             GameObject unit = hit.collider.gameObject;
-            if (!selectedUnits.Contains(unit))  
+            if (!selectedUnits.Contains(unit))
             {
                 selectedUnits.Add(unit);
                 Debug.Log("Selected unit: " + unit.name);
+
+                ChangeSprite(unit, true);
             }
         }
         else
@@ -84,11 +85,34 @@ public class UnitSelectionAndMovement : MonoBehaviour
             Vector3 screenPos = Camera.main.WorldToScreenPoint(unit.transform.position);
             if (selectionBox.Contains(screenPos))
             {
-                if (!selectedUnits.Contains(unit)) 
+                if (!selectedUnits.Contains(unit))  
                 {
                     selectedUnits.Add(unit);
                     Debug.Log("Selected unit: " + unit.name);
+                    
+                    ChangeSprite(unit, true);
                 }
+            }
+        }
+    }
+
+    void ChangeSprite(GameObject unit, bool isSelected)
+    {
+        SpriteRenderer spriteRenderer = unit.GetComponent<SpriteRenderer>();
+        Unit unitScript = unit.GetComponent<Unit>(); 
+        if (spriteRenderer != null && unitScript != null)
+        {
+            if (isSelected)
+            {
+                if (unitScript.originalSprite == null)
+                {
+                    unitScript.originalSprite = spriteRenderer.sprite; 
+                }
+                spriteRenderer.sprite = unitScript.selectedSprite; 
+            }
+            else
+            {
+                spriteRenderer.sprite = unitScript.originalSprite; 
             }
         }
     }
@@ -124,6 +148,11 @@ public class UnitSelectionAndMovement : MonoBehaviour
 
     void ClearSelection()
     {
+        foreach (GameObject unit in selectedUnits)
+        {
+            ChangeSprite(unit, false);
+        }
+
         selectedUnits.Clear();
     }
 

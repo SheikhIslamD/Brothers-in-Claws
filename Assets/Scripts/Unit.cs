@@ -1,10 +1,13 @@
 using UnityEngine;
 
-public class AllyUnity : MonoBehaviour
+public class Unit : MonoBehaviour
 {
 
     public int Health;
     public int attackDamage;
+    
+    public Sprite selectedSprite;
+    public Sprite originalSprite; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -15,6 +18,6 @@ public class AllyUnity : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        transform.LookAt(Camera.main.transform.position, Vector3.up);
     }
 }
