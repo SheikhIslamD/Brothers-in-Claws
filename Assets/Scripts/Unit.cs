@@ -1,7 +1,14 @@
 using UnityEngine;
 
-public class SpriteBillboard : MonoBehaviour
+public class Unit : MonoBehaviour
 {
+
+    public int Health;
+    public int attackDamage;
+    
+    public Sprite selectedSprite;
+    public Sprite originalSprite; 
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
