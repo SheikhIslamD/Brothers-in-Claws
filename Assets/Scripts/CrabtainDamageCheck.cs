@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class DamageCheck : MonoBehaviour
+public class CrabtainDamageCheck : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent; 
     public Transform player;
@@ -9,12 +9,15 @@ public class DamageCheck : MonoBehaviour
     public float damageCooldown = 2f;
     bool alreadyDamaged = false;
 
-    public int unitHealth = 100;
+    public int unitHealth = 500;
+
+    //public GameState sceneChange;
 
     private void Awake()
     {
         player = GameObject.FindWithTag("Enemy").transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        //sceneChange = GameObject.Find("GameState").GetComponent<GameState>();
     }
 
     // Update is called once per frame
@@ -61,7 +64,8 @@ public class DamageCheck : MonoBehaviour
     {
         if(unitHealth <= 0)
         {
-            Destroy(gameObject);
+            Debug.Log("lose");
+            //sceneChange.Lose();
         }
     }
 }
