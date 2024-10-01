@@ -1091,7 +1091,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 696097294}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65289552f2ea03e4da0cda4511a49bbe, type: 3}
   m_Name: 
@@ -1099,8 +1099,10 @@ MonoBehaviour:
   agent: {fileID: 0}
   player: {fileID: 0}
   chaseRange: 1000
-  attackRange: 4
-  timeBetweenAttacks: 10
+  rangedAttackRange: 2
+  meleeAttackRange: 0.2
+  timeBetweenRangedAttacks: 10
+  timeBetweenMeleeAttacks: 2
   projectile: {fileID: 400855528}
 --- !u!1 &721616018 stripped
 GameObject:
@@ -1907,8 +1909,10 @@ MonoBehaviour:
   agent: {fileID: 0}
   player: {fileID: 0}
   chaseRange: 1000
-  attackRange: 2
-  timeBetweenAttacks: 10
+  rangedAttackRange: 2
+  meleeAttackRange: 0.2
+  timeBetweenRangedAttacks: 10
+  timeBetweenMeleeAttacks: 2
   projectile: {fileID: 400855528}
 --- !u!1001 &1291626492
 PrefabInstance:
