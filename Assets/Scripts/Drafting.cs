@@ -6,7 +6,7 @@ public class Drafting : MonoBehaviour
 {
     public GameState gameState;
     //how many crewmates are allowed on-field for the current fight
-    public int crewMax = 2;
+    public int crewMax = 10;
     //how many crewmates are currently selected/highlighted
     public List <GameObject> crewSelected;
     //all the spots in the UI for crew to be picked from
