@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8797655637039431659}
   - component: {fileID: 6683321684483931006}
   - component: {fileID: 5614890500481481368}
+  - component: {fileID: 7273039514721360153}
   m_Layer: 10
   m_Name: Shelldon
   m_TagString: Selectable
@@ -151,3 +152,20 @@ MonoBehaviour:
   attackDamage: 1
   selectedSprite: {fileID: 21300000, guid: 8a96322ff7655fb47999fdd33e5295aa, type: 3}
   originalSprite: {fileID: 21300000, guid: b67e54f21edc5f1438267f921783aac1, type: 3}
+--- !u!114 &7273039514721360153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4672096621449090594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fab76968907b804fbbe37d129a34c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  damageRange: 1.25
+  damageCooldown: 2
+  unitHealth: 100

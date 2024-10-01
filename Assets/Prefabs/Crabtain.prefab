@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2996167008258043678}
   - component: {fileID: 6152135619760409181}
   - component: {fileID: 4355480900616688002}
+  - component: {fileID: 8482720632772335625}
   m_Layer: 10
   m_Name: Crabtain
   m_TagString: Selectable
@@ -151,3 +152,20 @@ MonoBehaviour:
   attackDamage: 0
   selectedSprite: {fileID: 21300000, guid: e86e1a98dfa3e9a4db89138de3815db9, type: 3}
   originalSprite: {fileID: 0}
+--- !u!114 &8482720632772335625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779731138095548316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 973aba0c793c6954a9fa8c5adeebd37e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  damageRange: 1.25
+  damageCooldown: 2
+  unitHealth: 500

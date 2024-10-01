@@ -46,11 +46,9 @@ public class EnemySpawner : MonoBehaviour
                     if (NavMesh.SamplePosition(randomPosition, out hit, currentWave.spawnRadius, NavMesh.AllAreas))
                     {
                         Instantiate(enemyType.enemyPrefab, hit.position, Quaternion.identity);
-                        Debug.Log($"Wave {currentWaveIndex + 1}: Spawned enemy of type {enemyType.enemyPrefab.name} at {hit.position} from spawn point {enemyType.spawnPoint.name}");
                     }
                     else
                     {
-                        Debug.Log("Spawn position not valid, retrying...");
                         i--; 
                     }
 
@@ -58,7 +56,6 @@ public class EnemySpawner : MonoBehaviour
                 }
             }
 
-            Debug.Log($"Wave {currentWaveIndex + 1} completed. Waiting {currentWave.timeBetweenWaves} seconds before the next wave.");
             currentWaveIndex++;
 
             if (currentWaveIndex < waves.Count)
@@ -67,6 +64,6 @@ public class EnemySpawner : MonoBehaviour
             }
         }
 
-        Debug.Log("All waves have been completed.");
+        
     }
 }
