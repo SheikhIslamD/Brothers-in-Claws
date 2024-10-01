@@ -15,6 +15,11 @@ public class MainMenuManager : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void PlayDemo()
+    {
+        SceneManager.LoadScene("NicolasWorkScene");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
