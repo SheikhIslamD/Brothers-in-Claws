@@ -254,6 +254,7 @@ GameObject:
   - component: {fileID: 121333635}
   - component: {fileID: 121333634}
   - component: {fileID: 121333633}
+  - component: {fileID: 121333636}
   m_Layer: 0
   m_Name: Square (2)
   m_TagString: Selectable
@@ -353,6 +354,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &121333636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121333632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fab76968907b804fbbe37d129a34c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 121333633}
+  player: {fileID: 0}
+  damageRange: 1.15
+  damageCooldown: 2
+  unitHealth: 100
 --- !u!1 &129856488
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,7 +730,7 @@ GameObject:
   - component: {fileID: 695311765}
   m_Layer: 0
   m_Name: Triangle
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -754,8 +772,10 @@ MonoBehaviour:
   agent: {fileID: 695311765}
   player: {fileID: 0}
   chaseRange: 1000
-  attackRange: 4
-  timeBetweenAttacks: 10
+  rangedAttackRange: 2
+  meleeAttackRange: 1.15
+  timeBetweenRangedAttacks: 10
+  timeBetweenMeleeAttacks: 2
   projectile: {fileID: 972520065}
 --- !u!212 &695311767
 SpriteRenderer:
