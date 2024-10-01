@@ -12,6 +12,7 @@ public class GameState : MonoBehaviour
     public GameObject winMenu;
 
     InputAction winKey;
+    InputAction loseKey;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
