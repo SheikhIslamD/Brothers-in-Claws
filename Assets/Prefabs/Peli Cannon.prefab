@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6840336302136811696}
   - component: {fileID: 8455789036344935591}
   - component: {fileID: 6785719682161890316}
+  - component: {fileID: 2958699683998941658}
   m_Layer: 10
   m_Name: Peli Cannon
   m_TagString: Selectable
@@ -151,3 +152,20 @@ MonoBehaviour:
   attackDamage: 3
   selectedSprite: {fileID: 21300000, guid: 5a218baea102dbd498ca94ab99fb643c, type: 3}
   originalSprite: {fileID: 21300000, guid: 112716ac5a1ef9a48851f020d2d7a6ea, type: 3}
+--- !u!114 &2958699683998941658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534687470662058165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fab76968907b804fbbe37d129a34c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agent: {fileID: 0}
+  player: {fileID: 0}
+  damageRange: 1.25
+  damageCooldown: 2
+  unitHealth: 100
