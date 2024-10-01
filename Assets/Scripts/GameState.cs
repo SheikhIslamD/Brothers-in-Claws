@@ -64,6 +64,7 @@ public class GameState : MonoBehaviour
     //Use this to trigger lose when crabtain hp is zero, and place anything else that needs to happen on loss
     public void Lose()
     {
+        Debug.Log("lose called");
         battleUI.SetActive(false);
         loseMenu.SetActive(true);
         Time.timeScale = 0f;
