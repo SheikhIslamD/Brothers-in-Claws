@@ -28,10 +28,10 @@ public class EnemyBehavior : MonoBehaviour
             ChasePlayer();
         }
 
-        if (AttackRangeCheckRanged())
+        /*if (AttackRangeCheckRanged())
         {
             RangedAttack();
-        }
+        }*/
 
         if (AttackRangeCheckMelee())
         {
@@ -45,7 +45,7 @@ public class EnemyBehavior : MonoBehaviour
         agent.SetDestination(player.position);
     }
 
-    bool AttackRangeCheckRanged()
+    /*bool AttackRangeCheckRanged()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
@@ -57,7 +57,7 @@ public class EnemyBehavior : MonoBehaviour
         {
             return false;
         }
-    }
+    }*/
 
     bool AttackRangeCheckMelee()
     {
@@ -87,7 +87,7 @@ public class EnemyBehavior : MonoBehaviour
         }
     }
 
-    private void RangedAttack()
+    /*private void RangedAttack()
     {
         if (!alreadyAttacked)
         {
@@ -105,7 +105,7 @@ public class EnemyBehavior : MonoBehaviour
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenRangedAttacks);
         }
-    }
+    }*/
 
     private void MeleeAttack()
     {
