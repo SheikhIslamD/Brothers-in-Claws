@@ -306,6 +306,10 @@ PrefabInstance:
       value: Peli Cannon (2)
       objectReference: {fileID: 0}
     - target: {fileID: 1534687470662058165, guid: 1fd19a35732ff7242a87069b88904073, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534687470662058165, guid: 1fd19a35732ff7242a87069b88904073, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -845,7 +849,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60.000004
-  orthographic: 1
+  orthographic: 0
   orthographic size: 1.68
   m_Depth: -1
   m_CullingMask:
@@ -870,8 +874,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 497453795}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21263108, y: -0.67437977, z: 0.21263108, w: 0.67437977}
-  m_LocalPosition: {x: 4.66, y: 3.34, z: 2.17}
+  m_LocalRotation: {x: 0.1494292, y: -0.69113743, z: 0.1494292, w: 0.69113743}
+  m_LocalPosition: {x: 5.19, y: 2.57, z: 2.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -945,13 +949,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 623246276}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21263108, y: -0.67437977, z: 0.21263108, w: 0.67437977}
-  m_LocalPosition: {x: 4.66, y: 3.34, z: 2.17}
+  m_LocalRotation: {x: 0.1494292, y: -0.69113743, z: 0.1494292, w: 0.69113743}
+  m_LocalPosition: {x: 5.19, y: 2.57, z: 2.42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 35, y: -90, z: 0}
+  m_LocalEulerAnglesHint: {x: 24.4, y: -90, z: 0}
 --- !u!1 &665872038
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +1764,10 @@ PrefabInstance:
     - target: {fileID: 8779731138095548316, guid: 1763741845655b242b76e36668b0f53e, type: 3}
       propertyPath: m_Name
       value: Crabtain
+      objectReference: {fileID: 0}
+    - target: {fileID: 8779731138095548316, guid: 1763741845655b242b76e36668b0f53e, type: 3}
+      propertyPath: m_TagString
+      value: Selectable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2619,6 +2627,10 @@ PrefabInstance:
       value: Peli Cannon (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1534687470662058165, guid: 1fd19a35732ff7242a87069b88904073, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1534687470662058165, guid: 1fd19a35732ff7242a87069b88904073, type: 3}
       propertyPath: m_TagString
       value: Enemy
       objectReference: {fileID: 0}
@@ -2813,7 +2825,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdccc3b22f6631d4a83811b14ae4756f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: []
+  waves:
+  - enemyTypes:
+    - enemyPrefab: {fileID: 4843311350201604317, guid: 84387e02b6b02a742ae73291307b5edb, type: 3}
+      numberOfEnemies: 3
+      spawnInterval: 3
+      spawnPoint: {fileID: 2078869908}
+    spawnRadius: 1
+    timeBetweenWaves: 2
 --- !u!114 &1920818874
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3044,7 +3063,7 @@ Transform:
   m_GameObject: {fileID: 2078869907}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.173, y: 1.134, z: 3.952}
+  m_LocalPosition: {x: 2.173, y: 0.94, z: 3.952}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
