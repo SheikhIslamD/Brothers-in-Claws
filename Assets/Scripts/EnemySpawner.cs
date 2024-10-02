@@ -18,7 +18,6 @@ public class EnemySpawner : MonoBehaviour
     public class Wave
     {
         public List<EnemyType> enemyTypes;
-        public float spawnRadius = 5f;      
         public float timeBetweenWaves = 5f; 
     }
 
@@ -40,16 +39,17 @@ public class EnemySpawner : MonoBehaviour
             {
                 for (int i = 0; i < enemyType.numberOfEnemies; i++)
                 {
-                    Vector3 randomPosition = enemyType.spawnPoint.position + Random.insideUnitSphere * currentWave.spawnRadius;
+                    Vector3 spawnPosition = enemyType.spawnPoint.position;
                     NavMeshHit hit;
 
-                    if (NavMesh.SamplePosition(randomPosition, out hit, currentWave.spawnRadius, NavMesh.AllAreas))
+                    // Ensure the spawn position is on the NavMesh
+                    if (NavMesh.SamplePosition(spawnPosition, out hit, 1.0f, NavMesh.AllAreas))
                     {
                         Instantiate(enemyType.enemyPrefab, hit.position, Quaternion.identity);
                     }
                     else
                     {
-                        i--; 
+                        i--; // Retry spawning if not on the NavMesh
                     }
 
                     yield return new WaitForSeconds(enemyType.spawnInterval);
@@ -63,7 +63,5 @@ public class EnemySpawner : MonoBehaviour
                 yield return new WaitForSeconds(currentWave.timeBetweenWaves);
             }
         }
-
-        
     }
 }
