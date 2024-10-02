@@ -181,7 +181,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdec3f4e87ac8d54281a0d7ac344c566, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agent: {fileID: 0}
+  agent: {fileID: 2072647974684677564}
   player: {fileID: 0}
   damageRange: 1.25
   damageCooldown: 2

@@ -16,7 +16,7 @@ public class GameState : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        unitDraft.SetActive(false);
+        //unitDraft.SetActive(false);
         battleUI.SetActive(false);
         loseMenu.SetActive(false);
         winMenu.SetActive(false);
@@ -53,6 +53,7 @@ public class GameState : MonoBehaviour
         //Drafting.EndDraft();
         unitDraft.SetActive(true);
         Time.timeScale = 0f;
+        Debug.Log("Drafting starts");
     }
     public void StartBattle()
     {
@@ -67,7 +68,7 @@ public class GameState : MonoBehaviour
         Debug.Log("lose called");
         battleUI.SetActive(false);
         loseMenu.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     //Use this to trigger win when all enemies are defeated and place anything else that needs to happen on win
@@ -75,7 +76,7 @@ public class GameState : MonoBehaviour
     {
         battleUI.SetActive(false);
         winMenu.SetActive(true);
-        Time.timeScale = 0f;
+        //Time.timeScale = 0f;
     }
 
     //putting these button click functions here for now to avoid too many separate scripts and clutter in inspector
