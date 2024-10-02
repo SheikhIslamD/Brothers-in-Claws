@@ -249,9 +249,9 @@ GameObject:
   - component: {fileID: 2342501873003444313}
   - component: {fileID: 2119442449038283387}
   - component: {fileID: 2996167008258043678}
-  - component: {fileID: 6152135619760409181}
   - component: {fileID: 4355480900616688002}
   - component: {fileID: 8482720632772335625}
+  - component: {fileID: 3576348344161341866}
   m_Layer: 10
   m_Name: Crabtain
   m_TagString: Selectable
@@ -267,9 +267,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8779731138095548316}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: 0.65436965, z: -0, w: 0.75617486}
+  m_LocalRotation: {x: 0, y: 0.6543713, z: 0, w: 0.7561734}
   m_LocalPosition: {x: -0.255, y: -0.722, z: -0.809}
-  m_LocalScale: {x: 0.23986, y: 0.23986, z: 0.23986}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5997360302543693471}
@@ -338,8 +338,8 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8779731138095548316}
   m_Enabled: 1
-  m_AgentTypeID: 0
-  m_Radius: 0.56250006
+  m_AgentTypeID: -1372625422
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
@@ -352,29 +352,6 @@ NavMeshAgent:
   m_BaseOffset: 0.5625
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!136 &6152135619760409181
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8779731138095548316}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.56250006
-  m_Height: 1.125
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0.0000009536743}
 --- !u!114 &4355480900616688002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -398,7 +375,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8779731138095548316}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 973aba0c793c6954a9fa8c5adeebd37e, type: 3}
   m_Name: 
@@ -408,3 +385,24 @@ MonoBehaviour:
   damageRange: 1.25
   damageCooldown: 2
   unitHealth: 500
+--- !u!65 &3576348344161341866
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8779731138095548316}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.1800003, y: 1.28, z: 0.20000006}
+  m_Center: {x: 0, y: 0, z: 0}
