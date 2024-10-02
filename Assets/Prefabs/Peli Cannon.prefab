@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7653068674889873999}
   - component: {fileID: 8588752518716120338}
-  - component: {fileID: 6840336302136811696}
   - component: {fileID: 8455789036344935591}
   - component: {fileID: 6785719682161890316}
   - component: {fileID: 2958699683998941658}
+  - component: {fileID: 5478539090285812888}
   m_Layer: 10
   m_Name: Peli Cannon
   m_TagString: Selectable
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 2.484, y: 0.833, z: 2.097}
-  m_LocalScale: {x: 0.18473777, y: 0.18473777, z: 0.18473777}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.0595851}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -91,29 +91,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!136 &6840336302136811696
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1534687470662058165}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 1.44
-  m_Height: 2.22
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!195 &8455789036344935591
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -123,8 +100,8 @@ NavMeshAgent:
   m_GameObject: {fileID: 1534687470662058165}
   m_Enabled: 1
   m_AgentTypeID: -1372625422
-  m_Radius: 1.44
-  m_Speed: 0.5
+  m_Radius: 1
+  m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -159,7 +136,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1534687470662058165}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0fab76968907b804fbbe37d129a34c6b, type: 3}
   m_Name: 
@@ -169,3 +146,24 @@ MonoBehaviour:
   damageRange: 1.25
   damageCooldown: 2
   unitHealth: 100
+--- !u!65 &5478539090285812888
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534687470662058165}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 2.8800008, y: 2.22, z: 0.20000005}
+  m_Center: {x: 0, y: 0, z: 0}
