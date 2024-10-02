@@ -17,7 +17,7 @@ public class MainMenuManager : MonoBehaviour
 
     public void PlayDemo()
     {
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(3);
     }
 
     public void QuitGame()
