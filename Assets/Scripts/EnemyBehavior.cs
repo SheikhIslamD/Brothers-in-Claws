@@ -14,7 +14,7 @@ public class EnemyBehavior : MonoBehaviour
     public GameObject projectile;
     bool alreadyAttacked = false;
 
-    private void Awake()
+    private void Start()
     {
         player = GameObject.FindWithTag("Selectable").transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
