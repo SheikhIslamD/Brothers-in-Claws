@@ -32,6 +32,7 @@ public class CrabtainDamageCheck : MonoBehaviour
             TakeDamage();
             //update the Health display whenever Crabtain takes damage
             healthText.text = unitHealth.ToString();
+            Debug.Log(alreadyDamaged);
         }
 
         CheckHealth();
