@@ -1,29 +1,25 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AI;
+using Unity.VisualScripting;
 
-public class DraftingUI : MonoBehaviour
+public class BattleUI : MonoBehaviour
 {
 
     public Transform spawnPoint;
     public float spawnRadius = 0.1f;
 
+    public Drafting Drafting;
+    public GameObject[] battleUIButtons;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public GameObject pelicannonButton;
+    public GameObject shelldonButton;
+    public GameObject prawnButton;
 
     public void SpawnAlly(GameObject prefabToSpawn)
     {
-        if(prefabToSpawn != null && spawnPoint !=null)
+        //GameObject prefabToSpawn = Drafting.currentCrewmates[buttonNumber];
+        if (prefabToSpawn != null && spawnPoint !=null)
         {
 
             Vector3 navMeshPosition = spawnPoint.position + Random.insideUnitSphere * spawnRadius;
@@ -41,4 +37,12 @@ public class DraftingUI : MonoBehaviour
         }
         
     }
+
+/*    public void AssignButtonSprites() 
+    { 
+        foreach (GameObject button in battleUIButtons) 
+        {
+            button.GetComponent<Image>().sprite = Drafting.currentCrewmates[System.Array.IndexOf(battleUIButtons, button)].GetComponent<SpriteRenderer>().sprite;
+        }
+    }*/
 }

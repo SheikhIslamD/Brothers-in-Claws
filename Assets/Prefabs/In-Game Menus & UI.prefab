@@ -281,6 +281,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 4086713208080769824}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &331639174938269642
 GameObject:
   m_ObjectHideFlags: 0
@@ -374,7 +381,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 331639174938269642}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -1057,6 +1064,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 1221488007423998429}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &1294986759865948121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1943,6 +1957,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 4086713208080769824}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &2200369126910505442
 GameObject:
   m_ObjectHideFlags: 0
@@ -2590,6 +2611,147 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!1 &2810543081526252786
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8534825329166096229}
+  - component: {fileID: 8335498458112267116}
+  - component: {fileID: 6179974630934795085}
+  - component: {fileID: 857155627359820515}
+  - component: {fileID: 2808051380838096243}
+  - component: {fileID: 5437353236029560122}
+  m_Layer: 5
+  m_Name: Shelldon icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &8534825329166096229
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810543081526252786}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1141931114378926259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -208.40002, y: 173.49997}
+  m_SizeDelta: {x: 208, y: 150}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &8335498458112267116
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810543081526252786}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &6179974630934795085
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810543081526252786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &857155627359820515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810543081526252786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!222 &2808051380838096243
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810543081526252786}
+  m_CullTransparentMesh: 1
+--- !u!114 &5437353236029560122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2810543081526252786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b67e54f21edc5f1438267f921783aac1, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &2933999083247966729
 GameObject:
   m_ObjectHideFlags: 0
@@ -2739,12 +2901,12 @@ GameObject:
   - component: {fileID: 7241547489818784373}
   - component: {fileID: 7890581083365910643}
   m_Layer: 5
-  m_Name: Button
+  m_Name: 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7391807440812605350
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2754,16 +2916,16 @@ RectTransform:
   m_GameObject: {fileID: 3020973176192093815}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 3853166729793615573}
   m_Father: {fileID: 1141931114378926259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -353.02652, y: 178.22655}
-  m_SizeDelta: {x: 69.547, y: 69.547}
+  m_AnchoredPosition: {x: -325, y: 165.5}
+  m_SizeDelta: {x: 288, y: 222}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8728471301094056258
 CanvasRenderer:
@@ -2848,7 +3010,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1543327614529273288}
-        m_TargetAssemblyTypeName: DraftingUI, Assembly-CSharp
+        m_TargetAssemblyTypeName: BattleUI, Assembly-CSharp
         m_MethodName: SpawnAlly
         m_Mode: 2
         m_Arguments:
@@ -3162,13 +3324,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf9b316092be6ab48a1a0c93aa3c774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  spawnRadius: 0.1
+  allyCrewmatesPrefabs: []
+  currentCrewmates: []
+  battleUI: {fileID: 0}
   gameState: {fileID: 3590536955117634836}
-  crewMax: 3
   crewSelected: []
-  crewSpots:
-  - {fileID: 8630573103376769552}
-  - {fileID: 1261377382917020291}
-  - {fileID: 1261377382917020291}
+  crewMax: 3
 --- !u!1 &3326979224367937246
 GameObject:
   m_ObjectHideFlags: 0
@@ -3864,7 +4027,7 @@ GameObject:
   - component: {fileID: 979652992624269658}
   - component: {fileID: 7285836751805865041}
   m_Layer: 5
-  m_Name: Crew Select Button (6)
+  m_Name: Shelldon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3983,13 +4146,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 7285836751805865041}
+        m_TargetAssemblyTypeName: DraftingButton, Assembly-CSharp
+        m_MethodName: shelldon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4009,6 +4172,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 4086713208080769824}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 3020973176192093815}
+  shelldonButton: {fileID: 7959187343869302608}
+  prawnButton: {fileID: 7785619526693701235}
 --- !u!1 &4259448423955064366
 GameObject:
   m_ObjectHideFlags: 0
@@ -4030,7 +4200,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5830774687102257180
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4044,17 +4214,15 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6736795099229473759}
-  - {fileID: 3216571472698262252}
-  - {fileID: 8379037820904537132}
   - {fileID: 5365403546975177426}
   - {fileID: 3155023153941872237}
   - {fileID: 6302937937754565578}
   - {fileID: 2205028187928830322}
   - {fileID: 2210795032246422487}
+  - {fileID: 8946010227636071975}
   - {fileID: 4803959844892735830}
   - {fileID: 2497601196800249647}
   - {fileID: 8427365172506106821}
-  - {fileID: 8946010227636071975}
   - {fileID: 2181148532149006003}
   - {fileID: 3820880487639778985}
   - {fileID: 2709363071150217634}
@@ -4063,6 +4231,9 @@ RectTransform:
   - {fileID: 8226037016342649597}
   - {fileID: 510031503574107614}
   - {fileID: 6211844224542726512}
+  - {fileID: 3216571472698262252}
+  - {fileID: 8379037820904537132}
+  - {fileID: 9199543688549875602}
   m_Father: {fileID: 6632066866895693882}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -4183,13 +4354,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf9b316092be6ab48a1a0c93aa3c774b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 0}
+  spawnRadius: 0.1
+  allyCrewmatesPrefabs:
+  - {fileID: 1534687470662058165, guid: 1fd19a35732ff7242a87069b88904073, type: 3}
+  - {fileID: 4672096621449090594, guid: 88776b6aeff1f134f9691810aa7066eb, type: 3}
+  - {fileID: 8942831669506123553, guid: 3e6f3b80f538ec94da66ef97c9c78bcd, type: 3}
+  currentCrewmates: []
+  battleUI: {fileID: 1543327614529273288}
   gameState: {fileID: 3590536955117634836}
-  crewMax: 3
   crewSelected: []
-  crewSpots:
-  - {fileID: 2191593216989914336}
-  - {fileID: 7808452544601099128}
-  - {fileID: 7808452544601099128}
+  crewMax: 3
 --- !u!1 &4569287703644793177
 GameObject:
   m_ObjectHideFlags: 0
@@ -4238,6 +4413,148 @@ MonoBehaviour:
   battleUI: {fileID: 5722980558242589557}
   loseMenu: {fileID: 2752509409860972981}
   winMenu: {fileID: 2200369126910505442}
+  Drafting: {fileID: 4086713208080769824}
+--- !u!1 &4594495445985378613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9199543688549875602}
+  - component: {fileID: 8877694730722057320}
+  - component: {fileID: 8377914526703893226}
+  - component: {fileID: 6795972074360085478}
+  - component: {fileID: 360674876253546435}
+  - component: {fileID: 5272489687925845383}
+  m_Layer: 5
+  m_Name: Prawn icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &9199543688549875602
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594495445985378613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 5830774687102257180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 462.5, y: 249.7}
+  m_SizeDelta: {x: 218, y: 87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &8877694730722057320
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594495445985378613}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &8377914526703893226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594495445985378613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &6795972074360085478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594495445985378613}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!222 &360674876253546435
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594495445985378613}
+  m_CullTransparentMesh: 1
+--- !u!114 &5272489687925845383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594495445985378613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5e6aa971134bfe24cb6b7c380042b1a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &4608743403014376654
 GameObject:
   m_ObjectHideFlags: 0
@@ -5102,6 +5419,9 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 5873606475787608241}
+  - {fileID: 8534825329166096229}
+  - {fileID: 7692390203140645189}
   - {fileID: 7391807440812605350}
   - {fileID: 1331388162236379995}
   - {fileID: 2162038390172988721}
@@ -5197,6 +5517,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spawnPoint: {fileID: 0}
   spawnRadius: 0.1
+  Drafting: {fileID: 4086713208080769824}
+  battleUIButtons:
+  - {fileID: 3020973176192093815}
+  - {fileID: 7959187343869302608}
+  - {fileID: 7785619526693701235}
+  pelicannonButton: {fileID: 3020973176192093815}
+  shelldonButton: {fileID: 7959187343869302608}
+  prawnButton: {fileID: 7785619526693701235}
 --- !u!1 &5770440559120865688
 GameObject:
   m_ObjectHideFlags: 0
@@ -5317,6 +5645,147 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &5790862727019463749
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7692390203140645189}
+  - component: {fileID: 86775965225246600}
+  - component: {fileID: 4181355513888856099}
+  - component: {fileID: 554603045384905065}
+  - component: {fileID: 307779034059445645}
+  - component: {fileID: 1084919255929315313}
+  m_Layer: 5
+  m_Name: Prawn icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &7692390203140645189
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790862727019463749}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.44999996, y: 0.44999996, z: 0.44999996}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1141931114378926259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -79.60004, y: 169.19}
+  m_SizeDelta: {x: 218, y: 87}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &86775965225246600
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790862727019463749}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &4181355513888856099
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790862727019463749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &554603045384905065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790862727019463749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!222 &307779034059445645
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790862727019463749}
+  m_CullTransparentMesh: 1
+--- !u!114 &1084919255929315313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5790862727019463749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 5e6aa971134bfe24cb6b7c380042b1a3, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &5907857162988934339
 GameObject:
   m_ObjectHideFlags: 0
@@ -5736,6 +6205,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 1221488007423998429}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &6373019203613036720
 GameObject:
   m_ObjectHideFlags: 0
@@ -6430,6 +6906,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 1221488007423998429}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &6837592305130489081
 GameObject:
   m_ObjectHideFlags: 0
@@ -7444,6 +7927,147 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!1 &7631078202473547399
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5873606475787608241}
+  - component: {fileID: 197601452674790935}
+  - component: {fileID: 2408487006623683103}
+  - component: {fileID: 654594065618530926}
+  - component: {fileID: 7330920793963228445}
+  - component: {fileID: 3255375631658105642}
+  m_Layer: 5
+  m_Name: Pelicannon icon
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &5873606475787608241
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631078202473547399}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1141931114378926259}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -338.5, y: 173.5}
+  m_SizeDelta: {x: 288, y: 222}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!223 &197601452674790935
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631078202473547399}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_VertexColorAlwaysGammaSpace: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_UpdateRectTransformForStandalone: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!114 &2408487006623683103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631078202473547399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!114 &654594065618530926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631078202473547399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!222 &7330920793963228445
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631078202473547399}
+  m_CullTransparentMesh: 1
+--- !u!114 &3255375631658105642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7631078202473547399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 112716ac5a1ef9a48851f020d2d7a6ea, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
 --- !u!1 &7686369412780812874
 GameObject:
   m_ObjectHideFlags: 0
@@ -7458,7 +8082,7 @@ GameObject:
   - component: {fileID: 4260912623086399524}
   - component: {fileID: 8729001580994037201}
   m_Layer: 5
-  m_Name: Crew Select Button
+  m_Name: Peli Cannon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7577,13 +8201,13 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 8729001580994037201}
+        m_TargetAssemblyTypeName: DraftingButton, Assembly-CSharp
+        m_MethodName: pelicannon
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -7603,6 +8227,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 4086713208080769824}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 3020973176192093815}
+  shelldonButton: {fileID: 7959187343869302608}
+  prawnButton: {fileID: 7785619526693701235}
 --- !u!1 &7717155781314618338
 GameObject:
   m_ObjectHideFlags: 0
@@ -7615,8 +8246,9 @@ GameObject:
   - component: {fileID: 4770782072277733779}
   - component: {fileID: 6225073155831797936}
   - component: {fileID: 4736214403472825925}
+  - component: {fileID: 3862338781472146888}
   m_Layer: 5
-  m_Name: Crew Select Button (4)
+  m_Name: Prawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7722,7 +8354,52 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 6225073155831797936}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3862338781472146888}
+        m_TargetAssemblyTypeName: DraftingButton, Assembly-CSharp
+        m_MethodName: Select
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3862338781472146888}
+        m_TargetAssemblyTypeName: DraftingButton, Assembly-CSharp
+        m_MethodName: prawn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &3862338781472146888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7717155781314618338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32e2051b77a342548927ccf7c75ba61e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Drafting: {fileID: 4086713208080769824}
+  isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 3020973176192093815}
+  shelldonButton: {fileID: 7959187343869302608}
+  prawnButton: {fileID: 7785619526693701235}
 --- !u!1 &7785619526693701235
 GameObject:
   m_ObjectHideFlags: 0
@@ -7736,12 +8413,12 @@ GameObject:
   - component: {fileID: 2433343711052135682}
   - component: {fileID: 4904727666199523399}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2162038390172988721
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7751,16 +8428,16 @@ RectTransform:
   m_GameObject: {fileID: 7785619526693701235}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 5699640292599474505}
   m_Father: {fileID: 1141931114378926259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -202.10962, y: 178.22652}
-  m_SizeDelta: {x: 69.547, y: 69.547}
+  m_AnchoredPosition: {x: -106.8, y: 162}
+  m_SizeDelta: {x: 218, y: 87}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8149686424162045713
 CanvasRenderer:
@@ -7790,8 +8467,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: 5e6aa971134bfe24cb6b7c380042b1a3, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -7844,14 +8521,14 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
+      - m_Target: {fileID: 1543327614529273288}
+        m_TargetAssemblyTypeName: BattleUI, Assembly-CSharp
+        m_MethodName: SpawnAlly
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
+          m_ObjectArgument: {fileID: 8942831669506123553, guid: 3e6f3b80f538ec94da66ef97c9c78bcd, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8142,6 +8819,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 4086713208080769824}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &7959187343869302608
 GameObject:
   m_ObjectHideFlags: 0
@@ -8155,12 +8839,12 @@ GameObject:
   - component: {fileID: 2004741701844678014}
   - component: {fileID: 377230123972872109}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1331388162236379995
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8170,16 +8854,16 @@ RectTransform:
   m_GameObject: {fileID: 7959187343869302608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.45, y: 0.45, z: 0.45}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6450157483779679036}
   m_Father: {fileID: 1141931114378926259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -277.84625, y: 178.22652}
-  m_SizeDelta: {x: 69.547, y: 69.547}
+  m_AnchoredPosition: {x: -208.2, y: 164.7}
+  m_SizeDelta: {x: 208, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1137400924528557411
 CanvasRenderer:
@@ -8264,13 +8948,13 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1543327614529273288}
-        m_TargetAssemblyTypeName: DraftingUI, Assembly-CSharp
+        m_TargetAssemblyTypeName: BattleUI, Assembly-CSharp
         m_MethodName: SpawnAlly
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 4672096621449090594, guid: 88776b6aeff1f134f9691810aa7066eb, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -8428,7 +9112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5699640292599474505
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8642,7 +9326,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8186924405172943773}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
   m_Name: 
@@ -9110,6 +9794,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Drafting: {fileID: 1221488007423998429}
   isSelected: 0
+  battleUI: {fileID: 0}
+  pelicannonactive: 0
+  shelldonactive: 0
+  prawnactive: 0
+  pelicannonButton: {fileID: 0}
+  shelldonButton: {fileID: 0}
+  prawnButton: {fileID: 0}
 --- !u!1 &8995792519834557878
 GameObject:
   m_ObjectHideFlags: 0

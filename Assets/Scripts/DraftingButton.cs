@@ -7,6 +7,17 @@ public class DraftingButton : MonoBehaviour
     public bool isSelected;
     //highlight color
     Image colorHighlight;
+
+    public BattleUI battleUI;
+
+    public bool pelicannonactive;
+    public bool shelldonactive;
+    public bool prawnactive;
+
+    public GameObject pelicannonButton;
+    public GameObject shelldonButton;
+    public GameObject prawnButton;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void OnEnable()
     {
@@ -26,7 +37,7 @@ public class DraftingButton : MonoBehaviour
         {
             if (Drafting.crewSelected.Count < Drafting.crewMax)
             {
-                Drafting.crewSelected.Add(this.gameObject);
+                Drafting.crewSelected.Add(this.gameObject.name);
                 colorHighlight.color = Color.green;
                 isSelected = true;
             }
@@ -37,9 +48,51 @@ public class DraftingButton : MonoBehaviour
         }
         else
         {
-            Drafting.crewSelected.Remove(this.gameObject);
+            Drafting.crewSelected.Remove(this.gameObject.name);
             colorHighlight.color = Color.gray;
             isSelected = false;
+        }
+    }
+
+    public void pelicannon()
+    {
+        if (pelicannonactive)
+        {
+            pelicannonactive = false;
+            pelicannonButton.SetActive(false);
+        }
+        else 
+        {
+            pelicannonactive = true;
+            pelicannonButton.SetActive(true);
+        }
+        
+    }
+    public void shelldon()
+    {
+        if (shelldonactive)
+        {
+            shelldonactive = false;
+            shelldonButton.SetActive(false);
+        }
+        else
+        {
+            shelldonactive = true;
+            shelldonButton.SetActive(true);
+        }
+        
+    }
+    public void prawn()
+    {
+        if (prawnactive)
+        {
+            prawnactive = false;
+            prawnButton.SetActive(false);
+        }
+        else
+        {
+            prawnactive = true;
+            prawnButton.SetActive(true);
         }
     }
 }
