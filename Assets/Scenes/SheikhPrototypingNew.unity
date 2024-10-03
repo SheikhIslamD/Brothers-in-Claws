@@ -1019,9 +1019,21 @@ PrefabInstance:
       propertyPath: spawnPoint
       value: 
       objectReference: {fileID: 287811706}
+    - target: {fileID: 3020973176192093815, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086713208080769824, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 287811706}
     - target: {fileID: 5717224941647573355, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
       propertyPath: m_Name
       value: In-Game Menus & UI
+      objectReference: {fileID: 0}
+    - target: {fileID: 5722980558242589557, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6632066866895693882, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1062,6 +1074,14 @@ PrefabInstance:
     - target: {fileID: 6632066866895693882, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7785619526693701235, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7959187343869302608, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2548,7 +2568,6 @@ MonoBehaviour:
       numberOfEnemies: 3
       spawnInterval: 3
       spawnPoint: {fileID: 2078869908}
-    spawnRadius: 1
     timeBetweenWaves: 2
 --- !u!114 &1920818874
 MonoBehaviour:

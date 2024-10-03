@@ -11,13 +11,15 @@ public class GameState : MonoBehaviour
     public GameObject loseMenu;
     public GameObject winMenu;
 
+    public Drafting Drafting; //this should be unnecesarry if Drafting script is made into a singleton later
+
     InputAction winKey;
     InputAction loseKey;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
         //unitDraft.SetActive(false);
-        battleUI.SetActive(false);
+        //battleUI.SetActive(false);
         loseMenu.SetActive(false);
         winMenu.SetActive(false);
         SceneManager.sceneLoaded += OnSceneLoaded;
@@ -50,7 +52,6 @@ public class GameState : MonoBehaviour
 
     public void DraftPhase()
     {
-        //Drafting.EndDraft();
         unitDraft.SetActive(true);
         Time.timeScale = 0f;
         Debug.Log("Drafting starts");
@@ -59,7 +60,9 @@ public class GameState : MonoBehaviour
     {
         unitDraft.SetActive(false);
         battleUI.SetActive(true);
+        Drafting.EndDraft();
         Time.timeScale = 1f;
+        Debug.Log("Drafting end, Battle starts");
     }
 
     //Use this to trigger lose when crabtain hp is zero, and place anything else that needs to happen on loss
