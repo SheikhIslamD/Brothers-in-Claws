@@ -3086,13 +3086,17 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4259448423955064366, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5717224941647573355, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
       propertyPath: m_Name
       value: In-Game Menus & UI NEW
       objectReference: {fileID: 0}
     - target: {fileID: 5717224941647573355, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5722980558242589557, guid: fc3876cf2ae40ac4faabab8005a0089b, type: 3}
       propertyPath: m_IsActive
