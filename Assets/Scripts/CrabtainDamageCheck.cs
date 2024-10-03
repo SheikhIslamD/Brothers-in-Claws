@@ -8,6 +8,7 @@ public class CrabtainDamageCheck : MonoBehaviour
     public float damageRange = 1.25f;
     public float damageCooldown = 2f;
     bool alreadyDamaged = false;
+    bool attackAnimation = true;
 
     public int unitHealth = 500;
 
@@ -50,6 +51,7 @@ public class CrabtainDamageCheck : MonoBehaviour
         if(!alreadyDamaged)
         {
             unitHealth -= 25;
+            attackAnimation = true;
             alreadyDamaged = true;
             Invoke(nameof(ResetDamage), damageCooldown);
         }
