@@ -11,7 +11,7 @@ public class CrabtainDamageCheck : MonoBehaviour
     bool alreadyDamaged = false;
     bool attackAnimation = true;
 
-    public int unitHealth = 500;
+    public static int crabtainUnitHealth = 500;
 
     public TextMeshProUGUI healthText;
 
@@ -31,7 +31,8 @@ public class CrabtainDamageCheck : MonoBehaviour
         {
             TakeDamage();
             //update the Health display whenever Crabtain takes damage
-            healthText.text = unitHealth.ToString();
+            healthText.text = crabtainUnitHealth.ToString();
+            Debug.Log(alreadyDamaged);
         }
 
         CheckHealth();
@@ -55,7 +56,7 @@ public class CrabtainDamageCheck : MonoBehaviour
     {
         if(!alreadyDamaged)
         {
-            unitHealth -= 25;
+            crabtainUnitHealth -= 25;
             attackAnimation = true;
             alreadyDamaged = true;
             Invoke(nameof(ResetDamage), damageCooldown);
@@ -69,7 +70,7 @@ public class CrabtainDamageCheck : MonoBehaviour
 
     private void CheckHealth()
     {
-        if(unitHealth <= 0)
+        if(crabtainUnitHealth <= 0)
         {
             Debug.Log("lose");
             //sceneChange.Lose();
