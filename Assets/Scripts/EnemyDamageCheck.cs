@@ -8,6 +8,7 @@ public class EnemyDamageCheck : MonoBehaviour
     public float damageRange = 1.25f;
     public float damageCooldown = 2f;
     bool alreadyDamaged = false;
+    bool attackAnimation = false;
 
     public int unitHealth = 75;
 
@@ -47,6 +48,7 @@ public class EnemyDamageCheck : MonoBehaviour
         if(!alreadyDamaged)
         {
             unitHealth -= 25;
+            attackAnimation = true;
             alreadyDamaged = true;
             Invoke(nameof(ResetDamage), damageCooldown);
         }

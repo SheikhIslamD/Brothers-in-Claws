@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class CrabtainDamageCheck : MonoBehaviour
@@ -8,8 +9,11 @@ public class CrabtainDamageCheck : MonoBehaviour
     public float damageRange = 1.25f;
     public float damageCooldown = 2f;
     bool alreadyDamaged = false;
+    bool attackAnimation = true;
 
     public int unitHealth = 500;
+
+    public TextMeshProUGUI healthText;
 
     //public GameState sceneChange;
 
@@ -26,6 +30,8 @@ public class CrabtainDamageCheck : MonoBehaviour
         if (DamageRangeCheck())
         {
             TakeDamage();
+            //update the Health display whenever Crabtain takes damage
+            healthText.text = unitHealth.ToString();
         }
 
         CheckHealth();
@@ -50,6 +56,7 @@ public class CrabtainDamageCheck : MonoBehaviour
         if(!alreadyDamaged)
         {
             unitHealth -= 25;
+            attackAnimation = true;
             alreadyDamaged = true;
             Invoke(nameof(ResetDamage), damageCooldown);
         }

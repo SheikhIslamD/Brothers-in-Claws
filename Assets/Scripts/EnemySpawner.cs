@@ -21,6 +21,7 @@ public class EnemySpawner : MonoBehaviour
         public float timeBetweenWaves = 5f; 
     }
 
+    //private int enemyCount;
     public List<Wave> waves;
     private int currentWaveIndex = 0;
 
@@ -49,7 +50,7 @@ public class EnemySpawner : MonoBehaviour
                     }
                     else
                     {
-                        i--; // Retry spawning if not on the NavMesh
+                        i--;
                     }
 
                     yield return new WaitForSeconds(enemyType.spawnInterval);
