@@ -4,7 +4,7 @@ using UnityEngine;
 public class CrabtainDamageCheck : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent; 
-    public Transform player;
+    public Transform EnemyTag;
 
     public float damageRange = 1.25f;
     public float damageCooldown = 2f;
@@ -19,7 +19,6 @@ public class CrabtainDamageCheck : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Enemy").transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         //sceneChange = GameObject.Find("GameState").GetComponent<GameState>();
     }
@@ -36,6 +35,7 @@ public class CrabtainDamageCheck : MonoBehaviour
         }
 
         CheckHealth();
+        player = GameObject.FindWithTag("Enemy").transform;
     }
 
     bool DamageRangeCheck()
