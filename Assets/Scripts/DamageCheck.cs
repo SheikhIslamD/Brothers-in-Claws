@@ -12,9 +12,8 @@ public class DamageCheck : MonoBehaviour
 
     public int unitHealth = 100;
 
-    private void Awake()
+    private void Start()
     {
-        player = GameObject.FindWithTag("Enemy").transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
@@ -27,6 +26,7 @@ public class DamageCheck : MonoBehaviour
         }
 
         CheckHealth();
+        player = GameObject.FindWithTag("Enemy").transform;
     }
 
     bool DamageRangeCheck()

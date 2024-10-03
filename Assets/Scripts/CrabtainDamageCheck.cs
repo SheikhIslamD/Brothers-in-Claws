@@ -4,7 +4,7 @@ using UnityEngine;
 public class CrabtainDamageCheck : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent; 
-    public Transform EnemyTag;
+    public Transform player;
 
     public float damageRange = 1.25f;
     public float damageCooldown = 2f;
