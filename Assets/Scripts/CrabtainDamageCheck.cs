@@ -19,7 +19,8 @@ public class CrabtainDamageCheck : MonoBehaviour
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Enemy").transform;
+        crabtainUnitHealth = 500;
+        player = GameObject.Find("Crabtain").transform;
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
         //sceneChange = GameObject.Find("GameState").GetComponent<GameState>();
     }

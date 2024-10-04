@@ -17,13 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AlexArt.unity
     guid: 99c9720ab356a0642a771bea13969a05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlfredPrototyping 2.unity
     guid: 3979b222f64c26c4db5e79bde65ffbf4
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/AlfredPrototyping.unity
     guid: 40c0d43b4438d0445ac650901d985f05
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NicolasWorkScene.unity
     guid: d5bf051039843164da2271b396408140
   m_configObjects:
